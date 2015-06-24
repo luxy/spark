@@ -59,7 +59,6 @@ class SqlParserSuite extends SparkFunSuite {
 
   test("test case insensitive") {
     val parser = new CaseInsensitiveTestParser
-    fail("")
     assert(TestCommand("NotRealCommand") === parser.parse("EXECUTE NotRealCommand"))
     assert(TestCommand("NotRealCommand") === parser.parse("execute NotRealCommand"))
     assert(TestCommand("NotRealCommand") === parser.parse("exEcute NotRealCommand"))
