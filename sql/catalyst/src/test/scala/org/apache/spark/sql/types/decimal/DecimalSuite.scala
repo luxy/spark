@@ -31,7 +31,7 @@ class DecimalSuite extends SparkFunSuite with PrivateMethodTester {
       assert(d.precision === precision)
       assert(d.scale === scale)
     }
-
+    fail("")
     checkDecimal(new Decimal(), "0", 1, 0)
     checkDecimal(Decimal(BigDecimal("10.030")), "10.030", 5, 3)
     checkDecimal(Decimal(BigDecimal("10.030"), 4, 1), "10.0", 4, 1)
