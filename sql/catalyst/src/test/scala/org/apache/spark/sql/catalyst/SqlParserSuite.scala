@@ -53,6 +53,7 @@ class SqlParserSuite extends SparkFunSuite {
 
   test("test long keyword") {
     val parser = new SuperLongKeywordTestParser
+    
     assert(TestCommand("NotRealCommand") ===
       parser.parse("ThisIsASuperLongKeyWordTest NotRealCommand"))
   }
